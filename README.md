@@ -1,7 +1,19 @@
 ![Tushar Nankani's Undirected Graph](public/og_image.png)
 
+<br />
+<br />
+
+
+<p align="center">The overload of ideas has pushed me to connect the dots, analogous to my connected thoughts forming a data structure.</p>
+<p align="center"><a href="https://undirected-graph.netlify.app">Undirected Graph</a></p>
+  
+<br />
+<br />
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c6f44d34-0570-4ca0-9d3d-cabdaa2b3afb/deploy-status)](https://app.netlify.com/sites/undirected-graph/deploys)
 [![MADE BY Next.js](https://img.shields.io/badge/MADE%20BY%20Next.js-000000.svg?style=flat&logo=Next.js&labelColor=000)](https://nextjs.org/)
+
+<br />
 
 ## Features
 
@@ -40,6 +52,7 @@ src
 
 ## References
 
+- A huge shoutout to [wutali/nextjs-netlify-blog-template](https://github.com/wutali/nextjs-netlify-blog-template) 
 - [Netlify CMS Documentation](https://www.netlifycms.org/docs/intro/)
 - [Building a Markdown blog with Next 9.4 and Netlify](https://www.netlify.com/blog/2020/05/04/building-a-markdown-blog-with-next-9.4-and-netlify/)
 - [Hugo Theme - Codex](https://github.com/jakewies/hugo-theme-codex)
