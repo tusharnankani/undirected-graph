@@ -1,7 +1,8 @@
 export default function Copyright() {
+  let currentYear = new Date().getFullYear();
   return (
     <>
-      <p>&copy; 2020</p>
+      <p>&copy; {currentYear}</p>
       <style jsx>
         {`
           p {

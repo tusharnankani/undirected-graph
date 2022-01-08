@@ -37,10 +37,10 @@ export default function Navigation() {
               opacity: 0;
               width: 100%;
               height: 100vh;
-              text-align: right;
+              text-align: left;
               list-style: none;
               margin: 0;
-              padding: 0;
+              padding-left: 3rem;
               position: fixed;
               top: 0;
               background-color: #fff;

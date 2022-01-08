@@ -1,8 +1,20 @@
 {
   "base_url": "https://wutali-nextjs-netlify-blog.netlify.app",
-  "site_title": "Next.js Netlify Blog",
-  "site_description": "Next.js blog template for Netlify",
+  "site_title": "Tushar's Undirected Graph",
+  "site_description": "Tushar Nankani's ",
   "site_keywords": [
+    {
+      "keyword": "Tushar Nankani"
+    },
+    {
+      "keyword": "Blog"
+    },
+    {
+      "keyword": "Undirected Graph"
+    },
+    {
+      "keyword": "undirected-graph"
+    },
     {
       "keyword": "Next.js"
     },
@@ -13,7 +25,7 @@
       "keyword": "React"
     }
   ],
-  "posts_per_page": 5,
-  "twitter_account": "@my-account",
-  "github_account": "wutali"
+  "posts_per_page": 10,
+  "twitter_account": "@tusharnankanii",
+  "github_account": "tusharnankani"
 }
