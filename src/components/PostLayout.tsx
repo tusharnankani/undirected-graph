@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../public/styles/content.module.css";
+import styles from "./../../public/styles/content.module.css";
 import Author from "./Author";
 import Copyright from "./Copyright";
 import Date from "./Date";
