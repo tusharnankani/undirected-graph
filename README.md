@@ -4,7 +4,7 @@
 <br />
 
 
-<p align="center">The overload of ideas has pushed me to connect the dots, analogous to my connected thoughts forming a data structure.</p>
+<p align="center">The overload of ideas has pushed me to connect the dots, analogous to my directionless, although somehow connected thoughts forming a data structure.</p>
 <p align="center"><a href="https://undirected-graph.netlify.app">Undirected Graph</a></p>
   
 <br />
@@ -14,6 +14,11 @@
 [![MADE BY Next.js](https://img.shields.io/badge/MADE%20BY%20Next.js-000000.svg?style=flat&logo=Next.js&labelColor=000)](https://nextjs.org/)
 
 <br />
+
+
+## About
+
+![image](https://user-images.githubusercontent.com/61280281/148736513-923912da-cca2-4eb6-8e58-54bd16678ce1.png)
 
 ## Features
 
@@ -30,6 +35,16 @@
 - [Next.js](https://nextjs.org/)
 - [Netlify](https://www.netlify.com/)
 - [MDX](https://mdxjs.com/)
+
+## Local Setup || Contributing
+
+- Fork this repository. 
+- Clone the repository: `git clone https://github.com/<your-username>/undirected-graph.git`
+- Change directory: `cd undirected-graph`
+- Change branch before making any changes: `git checkout -b "feat/add-new-feat"`
+- Run `npm run dev` to start the devlopment server. Go to `localhost:3000`
+- Make changes and push to the respective branch.
+- Open a Pull Request.
 
 ### Styling pages by a customized theme
 
