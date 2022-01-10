@@ -3,3 +3,7 @@ tags:
     name: blog
   - slug: welcome
     name: welcome
+  - slug: life
+    name: life
+  - slug: death
+    name: death
