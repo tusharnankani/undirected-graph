@@ -7,3 +7,7 @@ tags:
     name: life
   - slug: death
     name: death
+  - slug: presentation
+    name: presentation
+  - slug: documentation
+    name: documentation
