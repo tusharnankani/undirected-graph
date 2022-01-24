@@ -49,7 +49,7 @@ export default function Navigation() {
               justify-content: center;
               z-index: 1;
               transform: translateY(100%);
-              transition: opacity 200ms;
+              transition: opacity 200ms all ease-in-out;
             }
             .active ul {
               opacity: 1;

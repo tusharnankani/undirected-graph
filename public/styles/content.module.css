@@ -10,11 +10,11 @@
 
 .content p {
 	line-height: 1.5rem;
-	margin: 1.5rem 0 0 0;
+	margin: 1.15rem 0 0 0;
 }
 
 .content a {
-	color: rgba(34, 34, 34, 0.9);
+	color: rgba(24, 24, 24, 0.9);
 	text-decoration: underline;
 	text-decoration-thickness: 1px;
 	text-decoration-color: #6b6b6b;
@@ -23,8 +23,8 @@
 }
 
 .content a:hover {
-	color: #222;
-	text-decoration: underline;
+	color: #1d1d1d;
+	text-decoration-color: #1d1d1d;
 }
 
 .content h1 {
@@ -86,7 +86,7 @@
 	margin-top: 0.1em;
 	margin-left: -0.2em;
 	z-index: -1;
-	color: #ededed;
+	color: #00538323;
 }
 
 .content table {
