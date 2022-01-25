@@ -11,3 +11,5 @@ tags:
     name: presentation
   - slug: documentation
     name: documentation
+  - slug: pattern
+    name: pattern
