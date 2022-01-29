@@ -13,3 +13,9 @@ tags:
     name: documentation
   - slug: pattern
     name: pattern
+  - slug: mentor-log
+    name: mentor-log
+  - slug: interaction
+    name: interaction
+  - slug: vent
+    name: vent
