@@ -1,7 +1,7 @@
 .content {
 	font-family: "Ubuntu", sans-serif;
 	color: #222;
-	font-weight: 300;
+	font-weight: 200;
 }
 
 .content time {
@@ -75,7 +75,7 @@
 }
 
 .content blockquote {
-	margin: 0 1rem;
+	margin: 1.5rem 1.25rem 0;
 }
 
 .content blockquote::before {
@@ -87,7 +87,7 @@
 	margin-top: 0.1em;
 	margin-left: -0.2em;
 	z-index: -1;
-	color: #00538323;
+	color: #0053831e;
 }
 
 .content table {
