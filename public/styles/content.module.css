@@ -1,7 +1,7 @@
 .content {
 	font-family: "Ubuntu", sans-serif;
 	color: #222;
-	font-weight: 200;
+	font-weight: 300;
 }
 
 .content time {
@@ -9,8 +9,9 @@
 }
 
 .content p {
-	line-height: 1.5rem;
+	line-height: 1.75rem;
 	margin: 1.15rem 0 0 0;
+	font-size: 1.15rem;
 }
 
 .content a {
