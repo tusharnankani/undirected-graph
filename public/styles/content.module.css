@@ -9,18 +9,18 @@
 }
 
 .content p {
-	line-height: 1.6rem;
+	line-height: 1.65rem;
 	margin: 1.15rem 0 0 0;
 	font-size: 1.15rem;
 }
 
 .content a {
-	color: rgba(24, 24, 24, 0.9);
+	color: rgb(24, 24, 24);
 	text-decoration: underline;
 	text-decoration-thickness: 1px;
-	text-decoration-color: #6b6b6b;
-	text-underline-offset: 2px;
-	transition: all 0.2s ease-in;
+	text-decoration-color: #1d1d1daa;
+	text-underline-offset: 4px;
+	transition: all 0.1s ease-in;
 }
 
 .content a:hover {

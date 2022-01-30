@@ -11,11 +11,17 @@ tags:
     name: presentation
   - slug: documentation
     name: documentation
+  - slug: hackathons
+    name: hackathons
   - slug: pattern
     name: pattern
-  - slug: mentor-log
-    name: mentor-log
+  - slug: log
+    name: log
+  - slug: mentor
+    name: mentor
   - slug: interaction
     name: interaction
+  - slug: college
+    name: college
   - slug: vent
     name: vent
