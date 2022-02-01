@@ -18,11 +18,15 @@ export default function PostList({ posts, tags, pagination }: Props) {
 		<div className={'container'}>
 			<div className={'posts'}>
 				<ul className={'post-list'}>
-					{posts.map((it, i) => (
-						<li key={i}>
-							<PostItem post={it} />
-						</li>
-					))}
+					{posts.map(
+						(it, i) =>
+							it.slug.includes('vent') ? null : (
+								<li key={i}>
+									{/* {console.log(it)} */}
+									<PostItem post={it} />
+								</li>
+							)
+					)}
 				</ul>
 				<Pagination
 					current={pagination.current}
@@ -38,6 +42,7 @@ export default function PostList({ posts, tags, pagination }: Props) {
 			<ul className={'categories'}>
 				{tags.map((it, i) => (
 					<li key={i}>
+						{/* {console.log(it)} */}
 						<TagLink tag={it} />
 					</li>
 				))}
