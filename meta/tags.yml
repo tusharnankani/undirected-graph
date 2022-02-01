@@ -25,3 +25,5 @@ tags:
     name: college
   - slug: vent
     name: vent
+  - slug: summary
+    name: summary
