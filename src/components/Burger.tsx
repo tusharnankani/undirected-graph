@@ -30,7 +30,7 @@ export default function Burger({ active, onClick }: Props) {
 						background: #222;
 						top: calc(50% - 2px / 2);
 						left: calc(50% - 28px / 2);
-						transition: all 150ms ease-in-out;
+						transition: all 300ms ease-in-out;
 					}
 					.meat-1 {
 						transform: translateY(-10px);

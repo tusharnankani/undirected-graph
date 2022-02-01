@@ -88,6 +88,11 @@ export default function PostList({ posts, tags, pagination }: Props) {
 						padding: 0 3rem;
 					}
 				}
+				@media (max-width: 769px) {
+					.posts {
+						padding-top: 2rem;
+					}
+				}
 			`}</style>
 		</div>
 	);

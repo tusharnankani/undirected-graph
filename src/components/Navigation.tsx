@@ -48,12 +48,12 @@ export default function Navigation() {
               flex-direction: column;
               justify-content: center;
               z-index: 1;
-              transform: translateY(100%);
-              transition: opacity 200ms all ease-in-out;
+              // transform: translateY(100%);
+              transition: all 300ms ease-in-out;
             }
             .active ul {
               opacity: 1;
-              transform: translateY(0);
+              // transform: translateY(0);
             }
             li {
               margin-bottom: 1.75rem;
