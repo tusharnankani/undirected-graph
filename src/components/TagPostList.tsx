@@ -75,6 +75,12 @@ export default function TagPostList({ posts, tag, pagination }: Props) {
             h1 {
               font-size: 2rem;
             }
+            .categories {
+              display: block;
+            }
+            .container {
+              padding: 0 3rem;
+            }
           }
         `}
       </style>
