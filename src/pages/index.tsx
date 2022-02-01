@@ -39,13 +39,14 @@ export default function Index() {
 				}
 				h1 {
 					font-size: 2.5rem;
-					margin: 0;
+					margin: 1rem 0;
 					font-weight: 500;
 				}
 				h2 {
 					font-size: 1.75rem;
 					font-weight: 400;
 					line-height: 1.25;
+					margin-top: 3.5rem;
 				}
 				.fancy {
 					color: #15847d;
