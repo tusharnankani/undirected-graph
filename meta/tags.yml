@@ -27,3 +27,9 @@ tags:
     name: vent
   - slug: summary
     name: summary
+  - slug: experience
+    name: experience
+  - slug: interview
+    name: interview
+  - slug: codeforgood
+    name: codeforgood
