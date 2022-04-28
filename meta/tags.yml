@@ -21,6 +21,8 @@ tags:
     name: mentor
   - slug: interaction
     name: interaction
+  - slug: observation
+    name: observation
   - slug: college
     name: college
   - slug: vent
