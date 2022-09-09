@@ -1,39 +1,15 @@
 tags:
-  - slug: blog
-    name: blog
-  - slug: welcome
-    name: welcome
-  - slug: life
-    name: life
-  - slug: death
-    name: death
-  - slug: presentation
-    name: presentation
-  - slug: documentation
-    name: documentation
-  - slug: hackathons
-    name: hackathons
+  - slug: experience
+    name: experience
+  - slug: technical
+    name: technical
   - slug: pattern
     name: pattern
-  - slug: log
-    name: log
-  - slug: mentor
-    name: mentor
   - slug: interaction
     name: interaction
   - slug: observation
     name: observation
-  - slug: college
-    name: college
-  - slug: vent
-    name: vent
-  - slug: summary
-    name: summary
-  - slug: experience
-    name: experience
-  - slug: interview
-    name: interview
-  - slug: codeforgood
-    name: codeforgood
-  - slug: overconfidence
-    name: overconfidence
+  - slug: realization
+    name: realization
+  - slug: reflection
+    name: reflection
