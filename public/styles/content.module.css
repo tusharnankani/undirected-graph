@@ -9,35 +9,43 @@
 }
 
 .content p {
-	line-height: 1.65rem;
-	margin: 1.15rem 0 0 0;
+	line-height: 1.6rem;
+	margin: 1rem 0 0 0;
 	font-size: 1.15rem;
+	word-spacing: 0.8px;
 }
 
 .content a {
-	color: rgb(24, 24, 24);
+	color: #1d1d1d;
 	text-decoration: underline;
 	text-decoration-thickness: 1px;
-	text-decoration-color: #1d1d1daa;
-	text-underline-offset: 4px;
-	transition: all 0.1s ease-in;
+	text-decoration-color: #1d1d1d8b;
+	text-underline-offset: 5px;
+	transition: all 0.15s ease-in;
+	padding: 1px 2px;
+	border-radius: 3px;
 }
 
 .content a:hover {
-	color: #1d1d1d;
 	text-decoration-color: #1d1d1d;
+	background-color: rgba(7, 89, 197, 0.07);
 }
 
 .content h1 {
-	margin: 2.5rem 0 0 0;
+	margin: 2.5rem 0 1rem 0;
+	word-spacing: 1px;
+	letter-spacing: 0.4px;
 }
 
 .content h2,
 .content h3,
 .content h4,
 .content h5 {
-	margin: 2rem 0 0 0;
-	line-height: 1.25em;
+	margin: 2rem 0 1rem 0;
+	line-height: 1.15rem;
+	word-spacing: 1px;
+	letter-spacing: 0.4px;
+	font-weight: 600;
 }
 
 .content h2::before {
@@ -119,7 +127,7 @@
 .content ol li,
 .content ul li {
 	font-size: 1.15rem;
-	line-height: 1.5rem;
+	line-height: 1.7rem;
 }
 
 .content li ol,
@@ -137,6 +145,8 @@
 
 .content img {
 	width: 100%;
+	border-radius: 8px;
+	margin: 1rem 0;
 }
 
 @media (min-width: 769px) {
