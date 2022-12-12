@@ -6,7 +6,7 @@ import config from "../lib/config";
 
 export function SocialList({}) {
   return (
-    <div>
+    <div className="social-list">
       <a
         title="Website"
         href={config.website_url}
@@ -32,11 +32,11 @@ export function SocialList({}) {
         <GitHub width={24} height={24} fill={"#222"} />
       </a>
       <style jsx>{`
-        a {
-          display: inline-block;
-        }
-        a:not(:last-child) {
-          margin-right: 2em;
+        .social-list {
+          display: flex;
+          align-items: center;
+          justify-items: center;
+          gap: 2rem;
         }
       `}</style>
     </div>
