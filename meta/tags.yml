@@ -1,13 +1,11 @@
 tags:
   - slug: experience
     name: experience
-  - slug: technical
-    name: technical
   - slug: interaction
     name: interaction
   - slug: observation
     name: observation
-  - slug: realization
-    name: realization
   - slug: reflection
     name: reflection
+  - slug: technical
+    name: technical
