@@ -123,6 +123,9 @@ export default function PostLayout({
             .social-list {
               margin-top: 3rem;
               text-align: center;
+              display: flex;
+              align-items: center;
+              justify-content: center;
             }
 
             @media (min-width: 769px) {

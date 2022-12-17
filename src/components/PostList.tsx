@@ -66,6 +66,7 @@ export default function PostList({ posts, tags, pagination }: Props) {
 					display: flex;
 					flex-direction: column;
 					flex: 1 1 auto;
+					margin-top: 0.6rem; 
 				}
 				.posts li {
 					margin-bottom: 1.5rem;
@@ -85,12 +86,7 @@ export default function PostList({ posts, tags, pagination }: Props) {
 						display: block;
 					}
 					.container {
-						padding: 0 3rem;
-					}
-				}
-				@media (max-width: 769px) {
-					.posts {
-						padding-top: 2rem;
+						padding: 0 5rem;
 					}
 				}
 			`}</style>
