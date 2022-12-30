@@ -1,0 +1,57 @@
+---
+slug: patternistic
+title: "Patternistic"
+date: 2022-12-30
+author: tushar
+tags:
+  - technical
+  - observation
+---
+
+Humans coherently love to make patterns to account for and validate their conclusions. However, this is a creative hypothesis for some day later. 
+
+Today, let us look at a subtle micro-interaction: [patternistic](https://tusharnankani.github.io/patternistic) — a small case study on how even the tiniest details matter.
+
+![patternistic cover image](/images/patternistic-1.jpg)
+
+## Context
+
+I was playing around with animations the week before I built patternistic. During that period, I built [Resonating Circles](https://tusharnankani.github.io/resonating-circles). 
+
+https://twitter.com/tusharnankanii/status/1592461308167098368
+
+Here, I implemented basic and raw animations, transitions and transformation with a little interactivity. This was a highly iterative process. I first created new circles in the center with no interaction. Then, onClick create in the center - a little interaction. Furthermore, creating circles onClick on those specific coordinates.
+
+https://twitter.com/tusharnankanii/status/1592634802813145088
+
+In the coming week, I saw a pattern on social media and I thought to build a tool that creates those patterns. However, patternisitc is no where close to what I thought I had in mind, but some beautiful experiences take place with no expectations in mind. So, here we go. 
+
+## patternistic
+
+Users love to interact. Interaction is fundamentally a contiguous response or feedback on user interaction. In Resonating Circles, the interaction was onClick. There _some_ friction. 
+
+Hereby, I chose to increase the level of interactivity, by responding to the user on onHover.
+
+I decided to play with animations to make some trailing patterns (low-key always wanted to do this) and here's what the [base code to create elements](https://github.com/tusharnankani/resonating-circles/blob/38d75938ac2234766820c9a5869616f4bbca2fe4/script.js#L8-L18) looked like:
+
+```javascript
+createNewCircle = (x = window.innerWidth / 2, y = window.innerHeight / 2) => {
+    let newCircle = document.createElement('div');
+    newCircle.classList.add(`circle`, `circle-${GLOBAL_COUNTER++}`);
+
+    /* set the orginating circle from x and y coordinate */
+    newCircle.style.setProperty('top', `calc(${y}px - ${CIRCLE_DIAMETER / 2}rem`);
+    newCircle.style.setProperty('left', `calc(${x}px - ${CIRCLE_DIAMETER / 2}rem`);
+
+    body.appendChild(newCircle);
+    setTimeout(() => body.removeChild(newCircle), ANIMATION_TIME_PER_CIRCLE);
+}
+```
+
+Ouptut:
+
+https://twitter.com/tusharnankanii/status/1594393148704591875
+
+### Zooming Out
+
+These experiments (or let's call them "case studies" to sound cool) were started with a blank canvas, with absolutely nothing but a broad topic or outline in mind. Rest was hit and trial. Experimenting, rather exploring like a kid. An iterative procedure until you get some satisfaction from what's infront of you. It was surprisingly yet extremely fulfilling. Like looking at someone learn how to walk.
