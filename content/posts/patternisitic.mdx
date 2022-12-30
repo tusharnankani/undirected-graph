@@ -18,39 +18,165 @@ Today, let us look at a subtle micro-interaction: [patternistic](https://tusharn
 
 I was playing around with animations the week before I built patternistic. During that period, I built [Resonating Circles](https://tusharnankani.github.io/resonating-circles). 
 
-https://twitter.com/tusharnankanii/status/1592461308167098368
+
+<p>
+  <TwitterTweetEmbed tweetId={"1592461308167098368"} />
+</p>
 
 Here, I implemented basic and raw animations, transitions and transformation with a little interactivity. This was a highly iterative process. I first created new circles in the center with no interaction. Then, onClick create in the center - a little interaction. Furthermore, creating circles onClick on those specific coordinates.
 
-https://twitter.com/tusharnankanii/status/1592634802813145088
+<p>
+  <TwitterTweetEmbed tweetId={"1592634802813145088"} />
+</p>
 
 In the coming week, I saw a pattern on social media and I thought to build a tool that creates those patterns. However, patternisitc is no where close to what I thought I had in mind, but some beautiful experiences take place with no expectations in mind. So, here we go. 
 
 ## patternistic
 
-Users love to interact. Interaction is fundamentally a contiguous response or feedback on user interaction. In Resonating Circles, the interaction was onClick. There _some_ friction. 
+Users love to interact. Interaction is fundamentally a contiguous response or feedback on user interaction. In Resonating Circles, the interaction was onClick. There is _some_ friction on click. 
 
-Hereby, I chose to increase the level of interactivity, by responding to the user on onHover.
+Hereby, I chose to increase the *level of interactivity*, by responding to the user on onHover for a smoother interaction.
 
-I decided to play with animations to make some trailing patterns (low-key always wanted to do this) and here's what the [base code to create elements](https://github.com/tusharnankani/resonating-circles/blob/38d75938ac2234766820c9a5869616f4bbca2fe4/script.js#L8-L18) looked like:
+I decided to make some trailing patterns (low-key always wanted to do this) and here's what the [base code to create elements](https://github.com/tusharnankani/patternistic/blob/a7a1f585d2c323b2ad5523696dd6eef672a33ce4/script.js#L19-L30) looked like:
 
 ```javascript
-createNewCircle = (x = window.innerWidth / 2, y = window.innerHeight / 2) => {
-    let newCircle = document.createElement('div');
-    newCircle.classList.add(`circle`, `circle-${GLOBAL_COUNTER++}`);
+let createElement = (x = window.innerWidth / 2, y = window.innerHeight / 2) => {
+  let newItem = document.createElement("div");
+  newItem.classList.add("item");
 
-    /* set the orginating circle from x and y coordinate */
-    newCircle.style.setProperty('top', `calc(${y}px - ${CIRCLE_DIAMETER / 2}rem`);
-    newCircle.style.setProperty('left', `calc(${x}px - ${CIRCLE_DIAMETER / 2}rem`);
+  newItem.style.setProperty("top", `calc(${y}px - ${CIRCLE_DIAMETER / 2}rem`);
+  newItem.style.setProperty("left", `calc(${x}px - ${CIRCLE_DIAMETER / 2}rem`);
+  newItem.style.setProperty("width", `${CIRCLE_DIAMETER}rem`);
+  newItem.style.setProperty("height", `${CIRCLE_DIAMETER}rem`);
 
-    body.appendChild(newCircle);
-    setTimeout(() => body.removeChild(newCircle), ANIMATION_TIME_PER_CIRCLE);
+  main.appendChild(newItem);
+  setTimeout(() => main.removeChild(newItem), disappearAfter);
+};
+```
+
+Ouptut:
+
+<p>
+  <TwitterTweetEmbed tweetId={"1594393148704591875"} />
+</p>
+
+A simple trailling pattern as we move the cursor. Now, this is exactly what I had in mind, but the mind wasn't satisified with this. It looked vanilla and I wanted to do more.
+ 
+So, I added a simple animation and a [keyframe](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) split into 5 phases —
+
+It would translate `4px` (here and there) and scale from 0.9 to the original size in 2 seconds from the time of origin of the circle.
+
+```css
+.item {
+    position: absolute;
+    animation: moveAround 2s ease-in-out infinite;
+}
+
+@keyframes moveAround {
+    0% {
+        transform: translate(4px, 4px);
+        transform: scale(0.9);
+    }
+    25% {
+        transform: translate(-4px, 4px);
+    }
+    50% {
+        transform: translate(4px, -4px);
+        transform: scale(0.95);
+    }
+    75% {
+        transform: translate(-4px, -4px);
+    }
+    100% {
+        transform: translate(4px, 4px);
+        transform: scale(1);
+    }
+}
+```
+
+Output:
+
+<p>
+  <TwitterTweetEmbed tweetId={"1594393165905399809"} />
+</p>
+
+Then, if we play around more, we could make it obvious and more energetic by extending our limits: 
+
+In short — reducing our total time window (to one second, in this case) and making our scaling up much more obvious.
+
+```css
+.item {
+    position: absolute;
+    animation: moveAround 1s ease-in-out infinite;
+}
+
+@keyframes moveAround {
+    0% {
+        transform: translate(4px, 4px);
+        transform: scale(0.8);
+    }
+    25% {
+        transform: translate(-4px, 4px);
+    }
+    50% {
+        transform: translate(4px, -4px);
+        transform: scale(0.9);
+    }
+    75% {
+        transform: translate(-4px, -4px);
+    }
+    100% {
+        transform: translate(4px, 4px);
+        transform: scale(1);
+    }
 }
 ```
 
 Ouptut:
 
-https://twitter.com/tusharnankanii/status/1594393148704591875
+<p>
+  <TwitterTweetEmbed tweetId={"1594394044464971776"} />
+</p>
+
+### Adding a control panel
+
+It was fun playing around with the code. Trying out different values and iterations. I would want the user to play with them as well, but to ease the process — I added a control panel. 
+
+<p>
+  <TwitterTweetEmbed tweetId={"1595513786814803968"} />
+</p>
+
+#### Thinking about the panel
+
+I had 3 straightforward variables in mind that I was continuously manipulating:
+
+- `height`/`width`: Size of the particle
+- `disappearAfter`: The particles that were disappearing after certain amount of time.
+- `appearAfter`: The particles that were created after a certain amount of time.
+
+Umm, but why should disappearAfter and appearAfter be different? To have a trailing effect we have to retain particles at their positions for a little longer. 
+
+Hence, we have justified: `disappearAfter` > `appearAfter`.
+
+#### Simplifying these variables
+
+Hopefully, these terms make sense to a developer. But how do I explain it to the user?
+
+Hence, I found an analogous description and manipulated the variable accordingly.
+
+*Size*: Equivalent to Height/Width (straightforward)
+
+*Trailing Length*: Propotional to the `disappearAfter`; the longer the duration before removing the particle, the longer it is going to stay, the longer will be the trailing length.
+
+*Number of particles*: Inversely proptional to the `appearAfter`. Let's take a closer look here. The number particles that are created every millisecond, would be more than the particles that are created every 100 milliseconds. Hence, it is inversely proportional to the absolute value of time.
+
+Note: The proportionality/dispropotionate factor is taken to be linear. Did not give a lot of thought here.
+
+Finally, I set some lower and upper bounds such that the effects does not go out of hand by the user. And our control panel was ready to use.
+
+<p>
+  <TwitterTweetEmbed tweetId={"1595513786814803968"} />
+</p>
 
 ### Zooming Out
 
