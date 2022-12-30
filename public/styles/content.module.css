@@ -34,7 +34,7 @@
 .content h1 {
 	margin: 2.5rem 0 1rem 0;
 	word-spacing: 1px;
-	letter-spacing: 0.4px;
+	letter-spacing: 0.8px;
 }
 
 .content h2,
@@ -44,7 +44,7 @@
 	margin: 2rem 0 1rem 0;
 	line-height: 1.15rem;
 	word-spacing: 1px;
-	letter-spacing: 0.4px;
+	letter-spacing: 0.8px;
 	font-weight: 600;
 }
 
