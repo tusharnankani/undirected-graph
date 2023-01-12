@@ -1,10 +1,16 @@
 {
-  "base_url": "https://undirected-graph.netlify.app",
+  "base_url": "https://blog.tusharnankani.com",
   "site_title": "Tushar's Undirected Graph",
   "site_description": "Tushar Nankani's Blog - Undirected Graph",
   "site_keywords": [
     {
       "keyword": "Tushar Nankani"
+    },
+    {
+      "keyword": "tusharnankani"
+    },
+    {
+      "keyword": "Portfolio"
     },
     {
       "keyword": "Blog"
@@ -26,7 +32,7 @@
     }
   ],
   "posts_per_page": 9,
-  "website_url": "http://tusharnankani.github.io",
+  "website_url": "https://tusharnankani.com",
   "twitter_account": "tusharnankanii",
   "github_account": "tusharnankani"
 }
