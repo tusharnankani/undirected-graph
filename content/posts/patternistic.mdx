@@ -52,7 +52,21 @@ A simple trailling pattern as we move the cursor around.
 
 Now, this is exactly what I had in mind, but the mind wasn't satisified with this. Now, it looked vanilla and I wanted to do more. 
 
-So, I added a simple animation and a [keyframe](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) split into 5 phases —
+### Improvise
+
+I thought I will move the particle "here and there". Yes, I could not describe what I wanted to do. I wanted to make it look random, but how do I specify this random.
+
+![4 circles representing cris-cross movements](/images/patternistic-1.png)
+
+I knew I wanted to keep it simple. Did not want to use JavaScript for this and wanted to keep it simple with [The modern web's underrated powerhouse](https://github.com/readme/featured/css-future). 
+
+I thought about the basic two-dimensional movements: Translate and Scale. Hence, I decided to define the random.
+
+![4 circles representing cris-cross movements with scale](/images/patternistic-2.png)
+
+<sub>Built with tldraw.com</sub>
+
+Hence, I added a [simple animation](https://www.smashingmagazine.com/2011/09/the-guide-to-css-animation-principles-and-examples) and a [keyframe](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) split into 5 phases —
 
 It would translate `4px` (here and there) and scale from `0.9` to the original size in `2` seconds from the time of origin of the circle.
 
@@ -83,6 +97,8 @@ It would translate `4px` (here and there) and scale from `0.9` to the original s
     }
 }
 ```
+
+Note: Why `ease-in-out`? Find out more about [easing functions](https://www.smashingmagazine.com/2022/10/advanced-animations-css/#but-what-is-an-easing-function). 
 
 Output:
 
@@ -149,6 +165,8 @@ Hence, we have: `disappearAfter` > `appearAfter`.
 #### Simplifying these variables
 
 Hopefully, these terms make sense to a developer. But how do I explain it to the user?
+
+![4 circles representing cris-cross movements](/images/patternistic-3.png)
 
 Hence, I thought about analogous descriptions and manipulated the variables accordingly.
 
