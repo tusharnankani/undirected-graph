@@ -9,3 +9,5 @@ tags:
     name: reflection
   - slug: technical
     name: technical
+  - slug: email
+    name: email
