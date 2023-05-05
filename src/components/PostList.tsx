@@ -14,18 +14,16 @@ type Props = {
 	};
 };
 export default function PostList({ posts, tags, pagination }: Props) {
+	posts = posts.filter((it, i) => (!it.slug.includes('vent')));
 	return (
 		<div className={'container'}>
 			<div className={'posts'}>
 				<ul className={'post-list'}>
 					{posts.map(
 						(it, i) =>
-							it.slug.includes('vent') ? null : (
 								<li key={i}>
-									{/* {console.log(it)} */}
 									<PostItem post={it} />
 								</li>
-							)
 					)}
 				</ul>
 				<Pagination
@@ -66,7 +64,6 @@ export default function PostList({ posts, tags, pagination }: Props) {
 					display: flex;
 					flex-direction: column;
 					flex: 1 1 auto;
-					margin-top: 0.6rem; 
 				}
 				.posts li {
 					margin-bottom: 1.5rem;
