@@ -27,8 +27,7 @@ export default function Pagination({ current, pages, link }: Props) {
       <style jsx>{`
         ul {
           list-style: none;
-          margin: 3rem 0 0 0;
-          padding: 0;
+          padding: 3rem 0;
         }
         li {
           display: inline-block;
