@@ -1,0 +1,92 @@
+---
+slug: sepathon
+title: "Sepathon 2024"
+date: 2024-04-06
+author: tushar
+tags:
+  - reflection
+---
+
+### Context
+
+JP Morgan Chase has a hackathon for new joiners who joined as part of the Software Engineer Program (SEP) - Right out of college.
+
+This year, I explored unchartered territory in this Hackathon - The AWS Landscape. 
+
+[AWS DeepRacer](https://aws.amazon.com/deepracer) is global competition hosted by AWS annually. AWS DeepRacer is a cloud-based platform that lets participants train and deploy ML model on a 1/18th scale race car. 
+
+We built a solution for the organising teams in AWS. Example, JPMC conduct in-house races to shortlist folks, and finally the top team globally represents JPMC at the AWS DeepRacer League. 
+
+Organisers of DeepRacer Leagues had to manually check Reward Functions for Hardcoded Waypoints and Coordinates. For a specific track, points could be hardcoded in multiple ways and Hardcoding is illegal. Moreover, plagiarism checks were also required. 
+
+Another manual task for them was to delete the AWS Resources after ending the races. Organisers have to manually delete the stack and it is not a straight-forward process. There is specific order of deletion to be followed. Example: To delete a stack, we have to delete the S3 Bucket. To delete the S3 Bucket, Objects in the S3 bucket, followed by its policies have to be deleted.
+
+We had to build a solution for hardcoded waypoints detection, plagiarism detection and deleting the stack resources and clearing the sandbox for the next set of teams.
+
+This was completely unchartered territory. We could not even visualize a solution. A backend, a frontend? Scripting? How would it access the AWS resources? We could not think about how to go about it. 
+
+# Sepathon 2024
+
+A few realisations in the past 48 hours —
+
+1. EQ beats IQ by a huge margin when working within teams. 
+
+We shared disappointments, emotions, gave up enough times, took enough breaks and got to know each other beyond. 
+
+It wasn't a move, tactic or a strategy. It just happened naturally, after meals, on walks. 
+
+That smoothness, that communication, that rapport — reflected in our working styles, from implementation to presentation. 
+
+It made more sense why working teams should break for meals together. 
+
+2. Have hope instead of having expectations. 
+
+This problem was very ambiguous and unexplored by our team. We were unsure till 12 hours into the hackathon what we were building. The expectations were so low. 
+
+But every small win was a step up. It gave us more hope, which in turn led to more confidence within. 
+
+3. Add structure to uncertainties and ambiguity. 
+
+With so much lack of clarity and ambiguity, and a constraint of time — it pressurizes you. You just want to transform into action. 
+
+But unfortunately that leads to the entire team running in different directions. 
+
+One from the team really needs to step up and help the team zoom out in such situations - to focus on breaking and understanding the scope of the problem. Once there's clarity in terms of problem, we can move to structuring our goals and next steps. 
+
+How did we do it? We broke down the problem to the smallest and easiest step possible. 
+
+4. Solve for the happy case. The easiest thing to do. 
+
+A problem often looks like a rock solid wall. There's SO MUCH to do, so much to solve, so many edge cases to fix. 
+
+In our case, we did not have clarity how will we access all the code dynamically in the S3 Bucket? How will deploy the solution programmatically?
+
+But we decided to build an MVP of MVP. Just try to detect waypoints in a local python file. Just do a plagiarism check locally for two files. Don't delete the entire stack, try to delete an object in the S3 bucket. Simple. 
+
+This ideology also had popped in since we realised there is no direction at the moment. Let's try _something_. Even the most basic solution is okay. 
+
+Eventually, it was a step up journey from there.
+
+5. There is a chance luck might be real
+
+I do not believe in luck. I am unsure about God either. 
+
+There is always a battle between Science and Religion, between facts and faith. 
+
+> Belief is a wise wager. Granted that faith cannot be proved, what harm will come to you if you gamble on its truth and it proves false? If you gain, you gain all; if you lose, you lose nothing.
+>
+> <cite>Blaise Pascal, Mathematician, Physicist, Philosopher</cite>
+
+Reason being, I am extremely shocked and happy to see how we figured out to deploy the solution. The shell scripts were being written in the AWS Console. Whereas plagiarism and hardcoded detection were happening locally. We decided to put up into a Version Control System. Ideally, at work we use BitBucket. But since this was outside our virtual systems, we decided to use GitHub as VCS.
+
+And the most natural thing I did mid-way through the Hackathon. `git clone`d our repository into the AWS Console. 
+
+And we had the most portable light-weight solution. 
+
+## Fin
+
+Read more about the solution — [tusharnankani/deepracer-off-the-spot](https://github.com/tusharnankani/deepracer-off-the-spot)
+
+Extremely grateful for this win at Sepathon <3
+
+![Sepathon Trophy](/images/sepathon-trophy.jpg)
