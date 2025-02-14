@@ -12,13 +12,13 @@ type Props = {
 export default function Pagination({ current, pages, link }: Props) {
   const pagination = generatePagination(current, pages);
   return (
-    <ul>
+    (<ul>
       {pagination.map((it, i) => (
         <li key={i}>
           {it.excerpt ? (
             "..."
           ) : (
-            <Link href={link.href(it.page)} as={link.as(it.page)}>
+            <Link href={link.href(it.page)} as={link.as(it.page)} legacyBehavior>
               <a className={it.page === current ? "active" : null}>{it.page}</a>
             </Link>
           )}
@@ -40,6 +40,6 @@ export default function Pagination({ current, pages, link }: Props) {
           font-weight: bold;
         }
       `}</style>
-    </ul>
+    </ul>)
   );
 }
