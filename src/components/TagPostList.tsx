@@ -18,7 +18,7 @@ export default function TagPostList({ posts, tag, pagination }: Props) {
     <div className={"container"}>
       <h1>
         <Link href="/posts">
-          <a>All posts</a>
+          All posts
         </Link>{' '}
         / <span>{tag.name}</span>
       </h1>
