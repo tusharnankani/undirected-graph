@@ -15,9 +15,9 @@ type Props = {
 };
 export default function TagPostList({ posts, tag, pagination }: Props) {
   return (
-    <div className={"container"}>
+    (<div className={"container"}>
       <h1>
-        <Link href="/posts">
+        <Link href="/posts" legacyBehavior>
           All posts
         </Link>{' '}
         / <span>{tag.name}</span>
@@ -84,6 +84,6 @@ export default function TagPostList({ posts, tag, pagination }: Props) {
           }
         `}
       </style>
-    </div>
+    </div>)
   );
 }
